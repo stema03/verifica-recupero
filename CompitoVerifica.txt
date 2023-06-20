@@ -1,0 +1,244 @@
+Simulazione di un flusso di lavoro aziendale basato su un workflow simile a Gitflow
+
+*** ATTENZIONE: gli esercizi vanno svolti nell'ordine in cui sono proposti 
+*** la valutazione verrà effettuata su quanto caricato sul repository remoto!
+*** ricordarsi sempre commit e push!                          
+
+
+Esercizio 1: (1 p)
+creare la struttura dei branch di base del "progetto":
+
+<nome-cognome>/develop
+	questo sarà il branch da cui partiranno tutti gli sviluppi
+
+<nome-cognome>/qa
+	questo sarà il branch su cui verrà effettuato il controllo di qualità prima del rilascio in 
+	produzione
+
+<nome-cognome>/release
+	questo sarà il branch su cui verranno effettuati i rilasci in produzione
+
+
+Effettuare la push su repo remoto dei branch creati (upstream).
+
+NB: tutti i branch partono dal branch 'main', che non verrà più utilizzato durante lo sviluppo.
+Fare molta attenzione al branch corrente durante gli esercizi!
+
+
+
+Esercizio 2: (1 punto)
+Partendo dal branch di develop, si inizia una sessione di sviluppo:
+
+Creare un file di testo 'intelligenza_artificiale.txt' con il seguente testo:
+
+"Buongiorno a tutti! Oggi desidero parlare dell'intelliXenza artifiXiale, un campo che sta trasformando 
+il mondo in cui viviamo. L'intelligenza artificiale ci offre infinite opportunità, dall'automazione 
+delle nostre attività quotidiane all'assistenza nella ricerXa scientifica. Tuttavia, è importante 
+ricordare che l'IA è solo uno strumento nelle mani dell'uomo. DobXiamo usarla con responsabilità ed 
+etica, affrontando le questioni di privacy e sicurezza. Solo attraverXo un uso consapevole e 
+responsabile potremo sfruttare al massimo il potenziale dell'intelliXenza artificiale per il bene 
+dell'uXanità. GraXie!"
+
+Effettuare una commit ponendo attenzione al messaggio descrittivo.
+Effettuare il tag del branch con il comando 'git tag esercizio2'
+Effettuare il push sul repository remoto.
+
+
+
+Esercizio 3: (1 punto)
+Preparazione della sessione di controllo della qualità: dal branch di qa, effettuare la merge del 
+branch di develop, avendo cura di controllarne il successo.
+
+Effettuare il tag del branch con il comando 'git tag esercizio3'
+Effettuare la push sul repository remoto.
+
+
+
+
+Esercizio 4: (1 punto)
+Tornando al branch di develop, modificare il file 'intelligenza_artificiale.txt' aggiungendo:
+
+"Ma cos'è esattamente l'intelliXenza artificiale? L'IA si riferisce alla creazione di sistemi o 
+macchine in grado di svolgere compiti che richiedono l'intelligenza umana. Questi sistemi possono 
+apprendere, ragionare, elaborare dati e prendeXe decisioni in modo autonomo. Grazie all'apprendimento 
+automatico e all'elaborazione dei dati, l'IA può analizXare modelli complessi e fornire soluzioni 
+intelligenti. È un campo in rapida evoluzione, che apre strade verso l'innovazione, l'automazione e 
+l'ottimizzazione in vari settori, dall'assistenXa sanitaria alla finanza e all'industria."
+
+Effettuare una commit ponendo attenzione al messaggio descrittivo.
+Effettuare il tag del branch con il comando 'git tag esercizio4'
+Effettuare il push sul repository remoto.
+
+
+
+Esercizio 5: (1 punto)
+Tornare al branch di qa, verificare che il file 'intelligenza_artificiale.txt' contiene solo il 
+primo paragrafo.
+
+Correggere il testo (ci sono alcune 'X').
+
+Effettuare una commit ponendo attenzione al messaggio descrittivo.
+Effettuare il tag del branch con il comando 'git tag esercizio5'
+Effettuare il push sul repository remoto.
+
+
+
+Esercizio 6: (1 punto)
+A questo punto siamo pronti al primo rilascio in produzione!
+Passare sul branch di release, ed effettuare il merge del branch di qa.
+
+Verificare che il file contenga il primo paragrafo corretto.
+Effettuare il tag del branch con il comando 'git tag esercizio6'
+Effettuare il push sul repository remoto.
+
+
+
+Esercizio 7: (1 punto)
+Da branch di qa, allineare i lavori: effettuare la merge con develop,
+controllando che ora sul branch di qa ci sia il primo paragrafo corretto
+seguito dal secondo paragrafo.
+
+Effettuare il tag del branch con il comando 'git tag esercizio7'
+Effettuare il push sul repository remoto.
+
+
+
+Esercizio 8: (1 punto)
+Torniamo al branch di develop: ora che è stato effettuato un rilascio,
+effettuiamo il riallienamento del branch di develop a quello del rilascio:
+controllare che ora il testo del primo paragrafo sia corretto.
+
+Effettuare il tag del branch con il comando 'git tag esercizio8'
+Effettuare il push sul repository remoto.
+
+
+
+
+
+Esercizio 9: (1 punto)
+Dal branch di qa, ora correggere il secondo paragrafo.
+Effettuare il tag del branch con il comando 'git tag esercizio9'
+Effettuare la commit e la push.
+
+
+
+
+Esercizio 10: (1 punto)
+Siamo ora pronti al secondo rilascio:
+- riallineare il branch di release a quello di qa
+- effettuare la push
+- riallineare il branch di develop a quello di release
+- effettuare il tag del branch con il comando 'git tag esercizio10'
+- effettuare la push
+
+
+
+
+A questo punto abbiamo simulato a grandi linee quello che è il flusso di lavoro sui rami principali
+durante lo sviluppo di un progetto software, e le modalità con cui i rami vengono riallineati.
+Avendo però effettuato un solo sviluppo per volta, non abbiamo incontrato situazioni di conflitto.
+
+
+
+
+Effettuiamo ora la simulazione di un flusso di lavoro più complesso che preveda più sviluppi 
+contemporanei con la risoluzione dei conflitti.
+
+Esercizio 11: (10 punti)
+
+- staccare un feature branch chiamato <nome-cognome>/feature01-add dal branch di develop
+- creare un nuovo file 'math.txt'
+- aggiungere una funzione:
+
+	"function add(a, b) { return a+b }"
+
+- effettuare la commit e la push (upstream)
+
+- * RIPARTENDO DAL BRANCH DI DEVELOP *
+- staccare i branch per le altre operazioni matematiche (feature02-sub, feature03-mul, feature04-div)
+	aggiungendo le operazioni di sottrazione, moltiplicazione, divisione
+	effettuando per ogni branch la commit e la push
+
+	* ogni feature branch dovrà avere solo UNA funzione matematica implementata
+	* a questo punto si avranno 4 feature branch, ognuno con una sola funzione matematica
+
+- su develop, effettuare la merge dei 4 feature branch, risolvendo i conflitti
+- al termine, su develop nel file "math.txt" ci saranno tutte e 4 le funzioni matematiche
+- allineare il branch di qa con le nuove modifiche
+	* ricordarsi di effettuare la push di tutti i branch
+
+- dal branch di qa, effettuare il controllo di qualità:
+	- aggiungere un commento in testa al file "math.txt"
+
+	" // funzioni matematiche "
+
+- dopo aver fatto commit e push, riallineare il branch di release ed effettuare la push
+
+
+
+
+
+Esercizio 12: (5 punti)
+
+*** ricordarsi commit e push ad ogni passaggio! ***
+
+- ripartendo da develop, staccare 2 nuovi feature branch:
+	<nome-cognome>/feature10-pari
+	<nome-cognome>/feature11-dispari
+
+- nel feature branch "pari", creare il nuovo file "numeri.txt"
+- inserire il seguente testo:
+
+I numeri naturali sono l'insieme di numeri interi positivi, partendo da 1 e proseguendo all'infinito 
+senza includere numeri negativi o decimali.
+I numeri naturali pari sono l'insieme di numeri interi positivi che possono essere divisi in maniera 
+esatta per 2, senza includere numeri dispari.
+
+- nel feature branch "dispari", creare il nuovo file "numeri.txt"
+- inserire il seguente testo:
+
+I numeri naturali sono l'insieme di numeri interi positivi, partendo da 1 e proseguendo all'infinito 
+senza includere numeri negativi o decimali.
+I numeri naturali dispari sono quei numeri interi positivi che non sono divisibili per 2, quindi sono 
+ottenuti dalla successione 1, 3, 5, 7, ... e così via, continuando all'infinito.
+
+- tornare su develop, ed effettuare la merge dei due feature branch
+- risolvere tutti i conflitti, in modo da avere la descrizione completa dei numeri pari e dispari
+- riallineare il branch di qa
+- effettuare il rilascio sul branch di release
+- riallineare il branch di develop a quello di release
+
+
+
+
+
+Esercizio 13: (5 punti)
+
+Dal branch di develop, creare un file di testo "<nome-cognome>.txt", 
+in cui compilare le risposte alle seguenti domande, argomentando adeguatamente:
+
+1) Cosa è GIT?
+2) Da cosa è composto un repository git (locale)?
+3) Descrivi il funzionamento della 'staging area'
+4) Il grafo della history: da cosa è composto
+5) Come funziona la history? Come fa git a mantenere la storia del progetto?
+
+Al termine, effettuare commit e push.
+Il file dovrà anche essere caricato sulla piattaforma FAD, per consentire la valutazione.
+
+Buon lavoro!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
