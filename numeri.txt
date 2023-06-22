@@ -1,0 +1,7 @@
+I numeri naturali sono l'insieme di numeri interi positivi, partendo da 1 e proseguendo all'infinito 
+
+senza includere numeri negativi o decimali.
+
+I numeri naturali pari sono l'insieme di numeri interi positivi che possono essere divisi in maniera 
+
+esatta per 2, senza includere numeri dispari.
