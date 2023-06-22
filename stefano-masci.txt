@@ -1,0 +1,19 @@
+1) Cosa è GIT?
+
+Git è un sistema di controllo che consente ai programmatori di tenere traccia delle modifiche apportate ai file nel corso del tempo, consentendo loro di collaborare in modo efficace su progetti di sviluppo software. Ogni volta che si apportano modifiche a un file, Git tiene traccia di queste modifiche e crea una nuova "commit" che rappresenta uno stato specifico del progetto in quel momento. In questo modo, si crea una cronologia completa delle modifiche apportate al codice sorgente nel tempo.
+
+2) Da cosa è composto un repository git (locale)?
+
+Un repository Git locale è composto da tre principali componenti: la directory di lavoro, la staging area e il repository stesso. La directory di lavoro contiene i file del progetto su cui si sta lavorando attivamente. L'area di staging è una zona intermedia in cui si selezionano le modifiche da includere nella prossima commit. Il repository contiene l'intera cronologia delle commit, insieme ai file, i riferimenti e i branch. Insieme, questi componenti consentono di tenere traccia delle modifiche, creare nuove versioni dei file e collaborare con altri sviluppatori.
+
+3) Descrivi il funzionamento della 'staging area'
+
+La funzione principale della staging area, detta anche index, è quella di permettere di selezionare le modifiche specifiche da includere nella prossima commit. Quando si lavora su un repository Git, inizialmente si apportano modifiche ai file nella directory di lavoro. Una volta che si è soddisfatti delle modifiche effettuate, si può aggiungere esplicitamente i file o le modifiche all'area di staging utilizzando il comando "git add". 
+
+4) Il grafo della history: da cosa è composto
+
+Il grafo della history di un repository Git è composto da una serie di commit collegate tra loro. Ogni commit rappresenta uno stato specifico del repository in un dato momento. Ogni commit ha un riferimento alla commit precedente, formando una catena di commit. I branch, che rappresentano linee di sviluppo separate, sono anche parte del grafo della history. I branch puntano a una commit specifica nel grafo e possono divergere e convergere, creando una struttura ramificata. Questo grafo consente di tenere traccia delle modifiche nel tempo e facilita la gestione del versionamento e della collaborazione nel repository Git.
+
+5) Come funziona la history? Come fa git a mantenere la storia del progetto?
+
+Git mantiene la storia del progetto attraverso una struttura dati chiamata "Directed Acyclic Graph" (DAG). Ogni commit ha un hash univoco basato sui suoi contenuti e riferisce alla commit precedente, formando una catena. Quando si crea una nuova commit, Git registra i cambiamenti rispetto alla commit precedente. I branch puntano a specifiche commit nel DAG, consentendo lo sviluppo parallelo. Git conserva la cronologia completa dei commit, facilitando il ripristino di versioni precedenti e la gestione delle modifiche concorrenti.
